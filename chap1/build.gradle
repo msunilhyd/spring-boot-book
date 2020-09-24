@@ -1,0 +1,25 @@
+buildscript {
+	ext {
+		// Always replace with latest version available at http://projects.spring.io/
+		// spring-boot/#quick-start
+		springBootVersion = '1.5.6.RELEASE'
+	}
+	
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+}
